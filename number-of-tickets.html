@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Number of Tickets</title>
+  <link rel="stylesheet" href="ticket-styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Select Number of Tickets</h1>
+    <p id="selected-price">Ticket Price: ₹100</p>
+
+    <label for="ticket-quantity">Number of Tickets:</label>
+    <input type="number" id="ticket-quantity" min="1" max="10" value="1">
+
+    <button class="next-btn" onclick="calculateTotal()">Proceed</button>
+    
+    <p id="total-price"></p>
+  </div>
+
+  <script>
+    // Get the ticket price from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const ticketPrice = urlParams.get('price');
+
+    // Update the ticket price on the page
+    document.getElementById('selected-price').textContent = Ticket Price: ₹${ticketPrice};
+
+    function calculateTotal() {
+      const quantity = document.getElementById('ticket-quantity').value;
+      const totalPrice = quantity * ticketPrice;
+      document.getElementById('total-price').textContent = Total Price: ₹${totalPrice};
+    }
+  </script>
+</body>
+</html>

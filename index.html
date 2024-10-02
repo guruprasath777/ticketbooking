@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Language</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Language</h1>
+    <div class="language-buttons">
+        <a href="ticket_price.html"><button onclick="setLanguage('en')" >English</button></a>
+      <button onclick="setLanguage('es')">Tamil</button>
+      <button onclick="setLanguage('fr')">Telugu</button>
+      <button onclick="setLanguage('de')">Hindi</button>
+      <!-- Add more languages here -->
+    </div>
+  </div>
+
+  <script>
+    function setLanguage(languageCode) {
+      alert("You selected: " + languageCode);
+      // Redirect or load content for selected language
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Prices</title>
+  <link rel="stylesheet" href="ticket-styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ticket Prices</h1>
+    <div class="ticket-options">
+        <a href="number-of-tickets.html">
+            <button class="ticket-card" onclick="selectTicket(100)">
+                <h2>VIP Ticket</h2>
+                <p class="price">₹100</p>
+              </button>
+        </a>
+      <button class="ticket-card" onclick="selectTicket(50)">
+        <h2>Regular Ticket</h2>
+        <p class="price">₹50</p>
+      </button>
+      <button class="ticket-card" onclick="selectTicket(30)">
+        <h2>Economy Ticket</h2>
+        <p class="price">₹30</p>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function selectTicket(price) {
+      // Redirect to the number of tickets page with the selected price
+      window.location.href = number-of-tickets.html?price=${price};
+    }
+  </script>
+</body>
+</html>
